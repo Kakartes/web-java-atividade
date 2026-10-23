@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <style>
+            .modo{
+                background-color: rgb(0, 0, 0);
+                color: white;
+
+                input{
+                    background-color: rgb(0, 0, 0);
+                    color: white;
+                }
+            }
+        
+
+    </style>
+
+    <input type="text" value="">
+    <button id="botao">Clique aqui</button>
+    <button id="botao2">Clique aqui</button>
+
+
+    <div id="mensagem"></div>
+
+    <script>
+        botao2.addEventListener("click", ()=>{
+            document.documentElement.classList.remove("modo")
+        })
+        botao.addEventListener("click", ()=>{
+            document.documentElement.classList.add("modo")
+        })
+  
+        const campoTexto = document.querySelector("input")
+        const mensagem = document.querySelector("#mensagem")
+        
+        
+        campoTexto.addEventListener("input", ()=>{
+            let digitado = campoTexto.value
+           
+
+            if(digitado == "chocolate"){
+                mensagem.innerText = "Meu sabor de sorvate favorito!!!"
+               
+
+
+            }else if(digitado == "flocos"){
+                mensagem.innerText = "Ahh, mas chocolate é o meu favorito..."
+                
+
+
+            }else{
+                mensagem.innerText = "Ahh, eu esperava um sabor de sorvete..."
+                
+            }
+        })
+
+    </script>
+    
+</body>
+</html>
