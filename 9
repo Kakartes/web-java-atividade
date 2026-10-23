@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <img id="imagens" src="" alt="">
+
+    <script>
+
+        const imagens = [ 
+"https://picsum.photos/id/237/600/400", 
+"https://picsum.photos/id/238/600/400", 
+"https://picsum.photos/id/239/600/400", 
+"https://picsum.photos/id/240/600/400" 
+]; 
+
+let indice = 0; 
+function trocarImagem() { 
+
+    indice = (indice + 1) % imagens.length;
+    document.getElementById("imagens").src = imagens[indice];
+    }
+
+// Executa a função a cada 5 segundos 
+setInterval(trocarImagem, 5000);
+    </script>
+</body>
+</html>
