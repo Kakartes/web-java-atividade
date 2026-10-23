@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>gerar</title>
+</head>
+<body>
+  <button id="gerar">Gerar Aventura</button>
+  <p id="aventura"></p>
+
+  <script>
+    const acoes = ["A Busca", "A Batalha", "O Resgate"];
+    const locais = ["sofrida", "alegre", "misteriosa"];
+    const complementos = ["do Dragão", "do Tesouro Esquecido", "da Espada Ancestral"];
+
+    function gerarAventura() {
+      const acao = acoes[Math.floor(Math.random() * acoes.length)];
+      const local = locais[Math.floor(Math.random() * locais.length)];
+      const complemento = complementos[Math.floor(Math.random() * complementos.length)];  //não lembrava disso e tive que pesquisar, mas é uma função que gera um número aleatório entre 0 e o tamanho do array, e depois pega o elemento do array correspondente a esse número aleatório
+
+      document.getElementById("aventura").textContent = `${acao} ${local} ${complemento}`;  //as variaves que estão com ${}, são usadas para concatenar as variáveis com o texto, e o ${} é usado para indicar que é uma variável, e não um texto (pesquisei isso também)
+    }
+
+    document.getElementById("gerar").addEventListener("click", gerarAventura);
+  </script>
+</body>
+</html>
