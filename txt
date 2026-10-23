@@ -1,0 +1,4 @@
+O objetivo de se usar o javascript em aplicações front-end. Usar assim vai permitir com que os desenvolvedores
+possam adicionar uma interatividade ou/e funcionalidades totalmente diferentes nas paginas web.
+Animações ou interações que chamem a atenção de quem ira ver o site pode ser por conta do javascript,
+eventos é algo que o javascript sabe fazer, por exemplo clicar em um botão e o fundo ficar vermelho ou colorido.
